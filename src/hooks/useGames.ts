@@ -18,6 +18,7 @@ export interface Game {
 export interface GameQuery {
 	genre: Genre | null;
 	platform: Platform | null;
+	sortOrder: string | null;
 }
 
 const useGames = (gameQuery: GameQuery) =>
@@ -27,6 +28,7 @@ const useGames = (gameQuery: GameQuery) =>
 			params: {
 				genres: gameQuery.genre?.id,
 				platforms: gameQuery.platform?.id,
+				ordering: gameQuery.sortOrder,
 			},
 		},
 		[gameQuery]
