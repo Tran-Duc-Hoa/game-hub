@@ -24,5 +24,4 @@ dist-ssr
 *.sw?
 
 # Dependencies
-package-lock.json
 .vercel
